@@ -1,0 +1,7 @@
+{
+  "generator-userscript": {
+    "promptValues": {
+      "namespace": "https://github.com/0Delfo0/WebScrobScript"
+    }
+  }
+}

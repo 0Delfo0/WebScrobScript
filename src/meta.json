@@ -1,0 +1,11 @@
+{
+  "$schema": "file:../meta.schema.json",
+
+  "name": "WebScrobScript",
+  "namespace": "https://github.com/0Delfo0/WebScrobScript",
+  "description": "Web Scrobbler",
+  "version": "1.0.0",
+  "include": [ "*", "http://ciao", "http://bau" ],
+  "downloadURL": "https://github.com/0Delfo0/WebScrobScript",
+  "updateURL": "https://github.com/0Delfo0/WebScrobScript"
+}
