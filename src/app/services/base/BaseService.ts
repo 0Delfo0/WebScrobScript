@@ -2,19 +2,19 @@ abstract class BaseService {
   // base Props
   protected kind: ServiceKind;
   // base CRUD
-  abstract add(serviceRequest: ServiceRequest): boolean;
-  abstract update(serviceRequest: ServiceRequest): boolean;
-  abstract list(query: string): ServiceResponse;
-  abstract delete(serviceRequest: ServiceRequest): boolean;
+  public abstract add(serviceRequest: ServiceRequest): boolean;
+  public abstract update(serviceRequest: ServiceRequest): boolean;
+  public abstract list(query: string): ServiceResponse;
+  public abstract delete(serviceRequest: ServiceRequest): boolean;
   // API
-  abstract baseApi(): string;
-  abstract callApi(): void;
+  public abstract baseApi(): string;
+  public abstract callApi(): void;
   // Authorization
-  abstract authorization(): boolean
-  abstract verifyCredentials(): boolean
+  public abstract authorization(): boolean;
+  public abstract verifyCredentials(): boolean;
 }
 
 enum ServiceKind {
   JSON,
-  XML
+  XML,
 }

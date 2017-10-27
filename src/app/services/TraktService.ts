@@ -1,5 +1,8 @@
-var Trakt = require('traktapi2');
+// import { Trakt } from "traktapi2";
 
+import {trakt} from Trakt
+
+// let Trakt = require("traktapi2");
 
 class TraktService extends BaseService {
   //  private Trakt = require('traktapi2');
@@ -18,44 +21,41 @@ class TraktService extends BaseService {
     super();
     this.kind = ServiceKind.JSON;
 
-
-
-
   }
 
-  add(serviceRequest: ServiceRequest): boolean {
+  public add(serviceRequest: ServiceRequest): boolean {
     throw new Error("Method not implemented.");
   }
 
-  update(serviceRequest: ServiceRequest): boolean {
+  public update(serviceRequest: ServiceRequest): boolean {
     throw new Error("Method not implemented.");
   }
 
-  list(query: string): ServiceResponse {
+  public list(query: string): ServiceResponse {
     throw new Error("Method not implemented.");
   }
 
-  delete(serviceRequest: ServiceRequest): boolean {
+  public delete(serviceRequest: ServiceRequest): boolean {
     throw new Error("Method not implemented.");
   }
 
-  baseApi(): string {
-    // return 'https://api.trakt.tv';    
-    return 'https://api-staging.trakt.tv';
+  public baseApi(): string {
+    // return 'https://api.trakt.tv';
+    return "https://api-staging.trakt.tv";
   }
 
-  callApi(): void {
+  public callApi(): void {
     throw new Error("Method not implemented.");
   }
 
-  authorization(): boolean {
+  public authorization(): boolean {
     try {
       this.trakt = new Trakt({
-        client_id: '',
-        client_secret: '',
+        client_id: "",
+        client_secret: "",
         redirect_uri: null, // Defaults to urn:ietf:wg:oauth:2.0:oob,
         user_agent: Constants.USER_AGENT,
-        endpoint: this.baseApi()
+        endpoint: this.baseApi(),
       });
       return true;
     } catch (error) {
@@ -64,7 +64,11 @@ class TraktService extends BaseService {
     }
   }
 
-  verifyCredentials(): boolean {
+  public verifyCredentials(): boolean {
     throw new Error("Method not implemented.");
   }
 }
+function newFunction() {
+    return ("traktapi2");
+}
+
