@@ -1,6 +1,11 @@
 {
+    "service": {
+        "id": "trakt",
+        "service-kind": "JSON",
+        "init-file": "trakt.json"
+    },
     "api": {
-        "base-uri": ""
+        "base-uri": "https://api-staging.trakt.tv"
     },
     "crud": {
         "add": {},
