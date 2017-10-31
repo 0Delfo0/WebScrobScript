@@ -1,6 +1,5 @@
-abstract class BaseService {
-  // base Props
-  protected kind: ServiceKind;
+abstract class BaseService implements ApiHelper, AuthHelper {
+  kind: ServiceKind;
   // base CRUD
   abstract add(serviceRequest: ServiceRequest): boolean;
   abstract update(serviceRequest: ServiceRequest): boolean;
@@ -12,9 +11,4 @@ abstract class BaseService {
   // Authorization
   abstract authorization(): boolean
   abstract verifyCredentials(): boolean
-}
-
-enum ServiceKind {
-  JSON,
-  XML
 }
