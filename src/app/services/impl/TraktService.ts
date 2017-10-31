@@ -1,10 +1,10 @@
-//var trakt = require('traktapi2');
-//import {trakt} from Trakt
+// var trakt = require('traktapi2');
+// import {trakt} from Trakt
 
 // let Trakt = require("traktapi2");
 
-class TraktService extends BaseService  {
-  kind: ServiceKind;
+class TraktService extends BaseService {
+  public kind: ServiceKind;
   //  private Trakt = require('traktapi2');
 
   private trakt: any;
@@ -47,7 +47,7 @@ class TraktService extends BaseService  {
     throw new Error("Method not implemented.");
   }
 
-  authorization(): boolean {
+  public authorization(): boolean {
     return false;
     // try {
     //   this.trakt = new Trakt({
@@ -69,6 +69,5 @@ class TraktService extends BaseService  {
   }
 }
 function newFunction() {
-    return ("traktapi2");
+  return ("traktapi2");
 }
-

@@ -1,5 +1,5 @@
-abstract class BaseService implements ApiHelper, AuthHelper {
-  kind: ServiceKind;
+abstract class BaseService implements IServiceApi, IServiceAuth {
+  public kind: ServiceKind;
   // base CRUD
   public abstract add(serviceRequest: ServiceRequest): boolean;
   public abstract update(serviceRequest: ServiceRequest): boolean;
@@ -9,6 +9,6 @@ abstract class BaseService implements ApiHelper, AuthHelper {
   public abstract baseApi(): string;
   public abstract callApi(): void;
   // Authorization
-  abstract authorization(): boolean
-  abstract verifyCredentials(): boolean
+  public abstract authorization(): boolean;
+  public abstract verifyCredentials(): boolean;
 }
