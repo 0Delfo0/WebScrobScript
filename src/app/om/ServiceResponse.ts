@@ -1,7 +1,7 @@
 class ServiceResponse {
 
-  id: string;
+  public id: string;
 
-  res: string;
+  public res: string;
 
 }

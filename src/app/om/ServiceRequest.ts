@@ -1,7 +1,7 @@
 class ServiceRequest {
 
-  id: string;
-  
-  req: string;
+  public id: string;
+
+  public req: string;
 
 }
